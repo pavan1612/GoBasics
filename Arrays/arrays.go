@@ -18,7 +18,7 @@ func main() {
 	// Declaration of Arrays and initialise seprately
 	var students [3]string
 	students[0] = "Pavan"
-	students[1] = "Kishore"
+	students[1] = "Kumar"
 	students[2] = "Gowda"
 	fmt.Printf("Students:%v of lenght %v\n", students, len(students))
 
@@ -32,7 +32,6 @@ func main() {
 	// Passing arrays with refernce
 	anotherMatrix := &matrix
 	fmt.Println(*anotherMatrix)
-	fmt.Println(&anotherMatrix) // Prints the memeory address 
-
+	fmt.Println(&anotherMatrix) // Prints the memeory address
 
 }
