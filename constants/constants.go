@@ -13,14 +13,34 @@ func main() {
 	fmt.Println(s)
 
 	// Constants can be used where variables are used - Here printing n
-	const n = 5000000
-	fmt.Println(n)
+	const n = 5000000000
+	fmt.Printf("%T\n", n)
 
 	const d = 3e10 / n
 	fmt.Println(int(d))
 	fmt.Println(math.Sin(n))
 
 	// Enums in GO is done through constant block using "iota"
+	// iota starts from 0 and scoped to the constant block
+	const (
+		a = iota
+		b
+		c
+	)
+	fmt.Println(a, b, c)
+
+	// Here we declare the one element as _(Write only variable) and understant enums
+	// We can also add an offset or use bitwise to raise power to the power of 2
+	const (
+		_ = iota + 5
+		can
+		dog
+		elephant
+	)
+	var animal int = dog
+	fmt.Printf("%v\n", animal == dog)
+	fmt.Println(dog)
+
 	// Here the isAdmin is 0001 and isHeadQuarters is 0010 amd so on due to bit shifting operation <<
 	const (
 		isAdmin = 1 << iota
