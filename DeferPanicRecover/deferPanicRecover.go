@@ -20,7 +20,7 @@ func main() {
 	Server()
 	fmt.Println("Third")
 
-	// Panic's occer after the defer statements are executed
+	// Panic occur after the defer statements are executed
 
 }
 
